@@ -1,0 +1,508 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  --height_header: 46.5px;
+  scroll-behavior: smooth;
+}
+
+/* HEADING - NAVIGATION */
+#header {
+  width: 100%;
+  height: 46.5px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+}
+
+#nav {
+  float: left;
+  font-size: 15px;
+  display: block;
+  width: 100%;
+}
+
+#nav > li {
+  display: inline-block;
+  position: relative;
+}
+
+#nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#nav li a {
+  text-decoration: none;
+  line-height: var(--height_header);
+  padding: 0px 24px;
+  display: block;
+}
+
+.menu-btn:hover,
+.content-tour .buy-btn:hover,
+#nav .subnav li:hover,
+#nav > li:hover > a {
+  color: black;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+#nav .subnav a {
+  color: black;
+  padding: 0 15px;
+  min-width: 150px;
+}
+
+.subnav {
+  list-style: none;
+  position: absolute;
+  background-color: #fff;
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav :hover .subnav {
+  display: block;
+  cursor: pointer;
+}
+
+/* ICON SEARCH - MENU */
+.menu-btn,
+.search-btn {
+  float: right;
+  color: #fff;
+  font-size: 20px;
+  line-height: var(--height_header);
+  padding: 0 21px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn,
+.search-btn {
+  position: absolute;
+  right: 0;
+}
+
+.search-btn:hover {
+  background-color: #a80202;
+  cursor: pointer;
+}
+
+/* CONTENT IN HEADING (PEOPLE CAN SEE THIS WHEN JOIN YOUR WEBSITE) */
+#slider {
+  margin-top: var(--height_header);
+  padding-top: 50%;
+  background: url(./Image/la.jpg) top center/cover no-repeat;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  padding: 32px 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: block;
+}
+
+#slider .text-heading {
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+#slider .text-description {
+  margin: 15px 0;
+}
+
+/* BODY - WEBSITE CONTENT */
+/* INTRODUCE ABOUT THE BAND  */
+#content {
+  min-height: 2000px;
+  margin-top: var(--height_header);
+}
+
+/* #section-sub-heading,
+#time-visit, */
+#slider {
+  position: relative;
+  z-index: -1;
+}
+
+#content .content-section {
+  max-width: 800px;
+  padding: 64px 16px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#content .section-heading {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 500;
+  letter-spacing: 4px;
+  font-size: 30px;
+  color: black;
+}
+
+#content .section-sub-heading {
+  text-align: center;
+  margin: 15px 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#content .about-text {
+  text-align: justify;
+}
+
+#band .section-footer {
+  padding: 32px 0;
+  display: inline-block;
+}
+
+#band .section-footer p {
+  margin: 15px 0;
+}
+
+#band .section-img {
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
+#band .section-footer img {
+  border-radius: 4px;
+  margin-bottom: 16px;
+  width: 60%;
+}
+
+/* TRAVEL TOUR - MOVING SCHEDULE OFTHE BAND */
+
+.tour-month {
+  list-style: none;
+  color: #757575;
+  background-color: white;
+}
+.tour-month li {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 16px;
+  line-height: 22px;
+}
+
+.tour-month li .status {
+  padding: 0 8px;
+  margin-left: 16px;
+  color: white;
+  background-color: red;
+  display: inline-block;
+}
+
+.tour-month li .still {
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  float: right;
+  padding: 0 8px;
+  margin-right: 16px;
+}
+
+/* PLACE TOUR */
+
+.wrap-content-tour {
+  background-color: black;
+}
+
+.place-tour {
+  margin: 0 -16px;
+  padding: 32px 8px;
+  overflow: hidden;
+}
+
+.place-tour #place {
+  padding: 0 8px;
+  margin-bottom: 16px;
+  float: left;
+}
+
+.place-tour #place img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.place-tour #place img:hover {
+  opacity: 0.6;
+}
+
+.place-tour #place .content-tour {
+  padding: 0 16px;
+  background-color: white;
+  display: inline-block;
+  width: 100%;
+}
+
+.content-tour h4,
+p {
+  margin: 15px 0;
+}
+
+.content-tour .time-visit {
+  opacity: 0.6;
+}
+.content-tour .describle {
+  font-size: 15px;
+}
+.content-tour .buy-btn {
+  color: white;
+  background-color: black;
+  padding: 8px 16px;
+  display: inline-block;
+}
+
+@media (min-width: 601px) {
+  #band .section-img,
+  .place-tour #place {
+    width: 33.333333%;
+  }
+}
+/* HOW TO CONTACT */
+
+.wrap-contact {
+  padding: 32px 0;
+  overflow: hidden;
+}
+
+.loca-phone-mail {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+#icon-contact {
+  width: 30px;
+  display: inline-block;
+}
+
+.text-contact,
+.loca-phone-mail {
+  float: left;
+}
+
+.text-contact {
+  width: 100%;
+}
+
+.text-contact .TC {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  display: block;
+}
+
+@media (min-width: 601px) {
+  .text-contact,
+  .loca-phone-mail {
+    width: 49.9999%;
+  }
+}
+
+.contact-btn {
+  float: right;
+  padding: 10px 16px;
+  background-color: black;
+  margin: 16px 0;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+}
+
+.contact-btn:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+/* MAP */
+.map img {
+  width: 100%;
+}
+
+/* END THE WEBSITE */
+#footer {
+  padding: 64px 16px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+#footer .icon-footer {
+  display: inline-block;
+}
+
+#footer ul {
+  list-style: none;
+}
+
+#footer ul li {
+  float: left;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+#footer ul li:hover {
+  opacity: 0.4;
+}
+
+#footer .end {
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+/* MODAL TICKETS */
+
+.modal {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal.open {
+  position: fixed;
+  display: flex;
+}
+
+.modal-box {
+  background-color: #fff;
+  min-height: 200px;
+  width: 900px;
+  max-width: calc(100% - 32px);
+  animation: modalFaceIn ease-out 0.5s;
+}
+
+/* MODAL HEADER */
+
+.modal-header {
+  padding: 32px 16px;
+  background-color: #009688;
+  color: white;
+  position: relative;
+}
+
+.modal-tickets {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 4px;
+  margin: 15px 0;
+}
+
+i#c1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.footer-close:hover,
+i#c1:hover {
+  color: black;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+/* MODAL BODY */
+
+.MODAL-TEXT {
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.modal-pay-btn {
+  padding: 16px 0;
+  background-color: #009688;
+  color: white;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.modal-pay-btn:hover {
+  color: black;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+/* MODAL FOOTER*/
+.modal-footer {
+  padding: 20px 0;
+  font-size: 15px;
+}
+
+.footer-heading {
+  float: right;
+}
+
+.footer-close {
+  color: white;
+  background-color: red;
+  display: inline-block;
+  padding: 10px;
+}
+
+i#c2 {
+  font-size: 10px;
+}
+
+/* MOVENMENT MODAL BOX TICKETS */
+
+@keyframes modalFaceIn {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* CHANGE MENU > MAX-WIDTH: 601PX */
+
+@media (max-width: 601px) {
+  #nav > li {
+    display: block;
+  }
+  .search-btn {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  #slider .text-content {
+    display: none;
+  }
+  #nav > li:first-child {
+    display: inline-block;
+  }
+  #header {
+    overflow: hidden;
+  }
+}
