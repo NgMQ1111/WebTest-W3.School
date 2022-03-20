@@ -80,6 +80,7 @@ html {
   font-size: 20px;
   line-height: var(--height_header);
   padding: 0 21px;
+  appearance: none;
 }
 
 .menu-btn {
